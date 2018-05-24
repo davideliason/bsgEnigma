@@ -5,7 +5,7 @@ var logger = require('morgan');
 var bodyParser = require('body-parser');
 const generatePassword = require('password-generator');
 
-// var comment = require('./routes/comment');
+var comment = require('./routes/comment');
 var app = express();
 
 // db
@@ -22,7 +22,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({'extended':'false'}));
 
-// app.use('/api/comments', comment);
+app.use('/api/comments', comment);
 
 // app.get('/api/passwords', (req, res) => {
 //   const count = 5;
@@ -36,12 +36,12 @@ app.use(bodyParser.urlencoded({'extended':'false'}));
 // });
 
 // ROUTES
-app.get('/api/comments', (req,res) => {
-	// this is where i would populate via database & server
-	// but for now just hard-code
-	const comments = ["one","two"];
-	res.json(comments);
-})
+// app.get('/api/comments', (req,res) => {
+// 	// this is where i would populate via database & server
+// 	// but for now just hard-code
+// 	const comments = ["one","two"];
+// 	res.json(comments);
+// })
 
 // catchall route handler
 
