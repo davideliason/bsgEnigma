@@ -1,0 +1,27 @@
+{
+  "name": "bsgenigma",
+  "version": "1.0.0",
+  "description": "MERN for art sculpture",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "morgan": "^1.9.0",
+    "serve-favicon": "^2.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davideliason/bsgenigma.git"
+  },
+  "keywords": [
+    "mern"
+  ],
+  "author": "David Eliason",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davideliason/bsgenigma/issues"
+  },
+  "homepage": "https://github.com/davideliason/bsgenigma#readme"
+}
