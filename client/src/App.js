@@ -34,13 +34,10 @@ class App extends Component {
 
     return (
      <div className="App">
-
-
         {comments.length ? (
           <div>
-            <h1>Comments.</h1>
+            <h1>Comments: </h1>
             <ul className="comments">
-            
               {comments.map((comment, index) =>
                 <li key={index}>
                   {comment}
@@ -50,7 +47,7 @@ class App extends Component {
           </div>
         ) : (
           <div>
-            <h1>No comments :(</h1>
+            <h1>No comments yet!(</h1>
           </div>
         )}
       </div>

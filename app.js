@@ -18,15 +18,11 @@ app.use(bodyParser.urlencoded({'extended':'false'}));
 // app.use('/api/comments', comment);
 
 app.get('/api/comments', (req,res) => {
+	// this is where i would populate via database & server
+	// but for now just hard-code
 	const comments = ["one","two"];
 	res.json(comments);
 })
-
-app.get('/api/comments', (req,res) => {
-	const comments = ["hello","coffee"];
-	res.json(comments);
-	console.log("comments sent");
-});
 
 app.get('/api/passwords', (req, res) => {
   const count = 5;
@@ -35,17 +31,13 @@ app.get('/api/passwords', (req, res) => {
   const passwords = Array.from(Array(count).keys()).map(i =>
     generatePassword(12, false)
   )
-
   // Return them as json
   res.json(passwords);
-
-  console.log(`Sent ${count} passwords`);
 });
-
-// plain route
+// catchall route handler
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname+'/client/public/index.html'));
+  res.sendFile(path.join(__dirname+'/client/build/index.html'));
 });
 
 
