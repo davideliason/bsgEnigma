@@ -4,7 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
 
-var book = require('./routes/comments');
+var comment = require('./routes/comment');
 var app = express();
 
 // MIDDLEWARE
@@ -16,4 +16,6 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 app.use('/api/comment', comment);
 
-module.exports = app;
+app.listen(3000, function() {
+	console.log("server at 3000");
+});
