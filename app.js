@@ -3,27 +3,46 @@ var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
+const generatePassword = require('password-generator');
 
-var comment = require('./routes/comment');
+// var comment = require('./routes/comment');
 var app = express();
 
 // MIDDLEWARE
-// app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join(__dirname, 'client/build')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({'extended':'false'}));
-app.use(express.static(path.join(__dirname, 'build')));
 
 // router route
-app.use('/api/comment', comment);
-// plain route
-app.get('/', (req,res) => {
-	res.json("hello");
+// app.use('/api/comments', comment);
+
+app.get('/api/comments', (req,res) => {
+	const comments = ["one","two"];
+	res.json(comments);
+})
+
+app.get('/api/passwords', (req, res) => {
+  const count = 5;
+
+  // Generate some passwords
+  const passwords = Array.from(Array(count).keys()).map(i =>
+    generatePassword(12, false)
+  )
+
+  // Return them as json
+  res.json(passwords);
+
+  console.log(`Sent ${count} passwords`);
 });
-// catchall route handler
-// app.get('*', (req, res) => {
-//   res.sendFile(path.join(__dirname+'/client/build/index.html'));
-// });
+
+// plain route
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname+'/client/public/index.html'));
+});
+
+
 
 const port = process.env.PORT || 5000;
 
