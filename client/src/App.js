@@ -31,7 +31,9 @@ class App extends Component {
         {comments.length ? (
           <div>
             <h1>BSG Enigma </h1>
+            <p>{this.state.comments[0].text}</p>
             <p>{this.state.comments[0].author}</p>
+
           </div>
         ) : (
           <div>
