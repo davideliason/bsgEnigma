@@ -5,13 +5,16 @@
   "main": "index.js",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "concurrently": "^3.5.1",
     "express": "^4.16.3",
     "morgan": "^1.9.0",
     "path": "^0.12.7",
     "serve-favicon": "^2.5.0"
   },
   "devDependencies": {},
-  "scripts": {},
+  "scripts": {
+    "start": "node app.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/davideliason/bsgenigma.git"
