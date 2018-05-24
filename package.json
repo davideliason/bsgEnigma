@@ -14,7 +14,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "dev": "concurrently \"node app.js\" \"cd client && yarn start\""
   },
   "repository": {
     "type": "git",

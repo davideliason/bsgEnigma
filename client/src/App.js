@@ -34,9 +34,10 @@ class App extends Component {
 
     return (
      <div className="App">
+
         {comments.length ? (
           <div>
-            <h1>Comments: </h1>
+            <h1>BSG Enigma </h1>
             <ul className="comments">
               {comments.map((comment, index) =>
                 <li key={index}>
