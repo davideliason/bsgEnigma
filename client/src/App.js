@@ -5,12 +5,14 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      passwords: []
+      passwords: [],
+      comments: []
     }
   }
 
   componentDidMount() {
      this.getPasswords();
+     this.getComments();
   }
 
    getPasswords = () => {
@@ -20,43 +22,35 @@ class App extends Component {
       .then(passwords => this.setState({ passwords }));
   }
 
+   getComments = () => {
+    // Get the passwords and store them in state
+    fetch('/api/comments')
+      .then(res => res.json())
+      .then(comments => this.setState({ comments }));
+  }
+
   render() {
-      const { passwords } = this.state;
+      const { comments } = this.state;
 
     return (
      <div className="App">
-        {/* Render the passwords if we have them */}
-        {passwords.length ? (
+
+
+        {comments.length ? (
           <div>
-            <h1>5 Passwords.</h1>
-            <ul className="passwords">
-              {/*
-                Generally it's bad to use "index" as a key.
-                It's ok for this example because there will always
-                be the same number of passwords, and they never
-                change positions in the array.
-              */}
-              {passwords.map((password, index) =>
+            <h1>Comments.</h1>
+            <ul className="comments">
+            
+              {comments.map((comment, index) =>
                 <li key={index}>
-                  {password}
+                  {comment}
                 </li>
               )}
             </ul>
-            <button
-              className="more"
-              onClick={this.getPasswords}>
-              Get More
-            </button>
           </div>
         ) : (
-          // Render a helpful message otherwise
           <div>
-            <h1>No passwords :(</h1>
-            <button
-              className="more"
-              onClick={this.getPasswords}>
-              Try Again?
-            </button>
+            <h1>No comments :(</h1>
           </div>
         )}
       </div>

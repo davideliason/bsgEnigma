@@ -22,6 +22,12 @@ app.get('/api/comments', (req,res) => {
 	res.json(comments);
 })
 
+app.get('/api/comments', (req,res) => {
+	const comments = ["hello","coffee"];
+	res.json(comments);
+	console.log("comments sent");
+});
+
 app.get('/api/passwords', (req, res) => {
   const count = 5;
 
