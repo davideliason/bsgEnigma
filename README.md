@@ -1,5 +1,6 @@
 # BSG Enigma
 ## 5/24/2018
+###[David Eliason](http://www.davethemaker.com)
 
 ### Why?
 Code for interactive art sculpture
@@ -10,3 +11,4 @@ Code for interactive art sculpture
 2. First built with SaaS mLab mongoDB, but will be in rural area
 3. Then, installed local mongdob, but rpi doesnt play well with mongoDB
 4. So, then installed Postgres
+2. 
