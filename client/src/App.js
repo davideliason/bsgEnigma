@@ -31,13 +31,7 @@ class App extends Component {
         {comments.length ? (
           <div>
             <h1>BSG Enigma </h1>
-            <ul className="comments">
-              {comments.map((comment, index) =>
-                <li key={index}>
-                  {comment}
-                </li>
-              )}
-            </ul>
+            <p>{this.state.comments[0].author}</p>
           </div>
         ) : (
           <div>
