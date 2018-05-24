@@ -8,7 +8,7 @@ var comment = require('./routes/comment');
 var app = express();
 
 // MIDDLEWARE
-app.use(express.static(path.join(__dirname, 'client/build')));
+// app.use(express.static(path.join(__dirname, 'client/build')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({'extended':'false'}));
@@ -20,7 +20,13 @@ app.use('/api/comment', comment);
 app.get('/', (req,res) => {
 	res.json("hello");
 });
+// catchall route handler
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname+'/client/build/index.html'));
+// });
 
-app.listen(3000, function() {
-	console.log("server at 3000");
+const port = process.env.PORT || 5000;
+
+app.listen(port, function() {
+	console.log(`Server listening on ${port}`);
 });
