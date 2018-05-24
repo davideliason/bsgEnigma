@@ -11,16 +11,9 @@ class App extends Component {
   }
 
   componentDidMount() {
-     this.getPasswords();
      this.getComments();
   }
 
-   getPasswords = () => {
-    // Get the passwords and store them in state
-    fetch('/api/passwords')
-      .then(res => res.json())
-      .then(passwords => this.setState({ passwords }));
-  }
 
    getComments = () => {
     // Get the passwords and store them in state

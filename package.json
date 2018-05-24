@@ -4,18 +4,21 @@
   "description": "MERN for art sculpture",
   "main": "index.js",
   "dependencies": {
+    "bluebird": "^3.5.1",
     "body-parser": "^1.18.3",
     "concurrently": "^3.5.1",
     "express": "^4.16.3",
+    "mongoose": "^5.1.2",
     "morgan": "^1.9.0",
+    "nodemon": "^1.17.5",
     "password-generator": "^2.2.0",
     "path": "^0.12.7",
     "serve-favicon": "^2.5.0"
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node app.js",
-    "dev": "concurrently \"node app.js\" \"cd client && yarn start\""
+    "start": "nodemon app.js",
+    "dev": "concurrently \"nodemon app.js\" \"cd client && yarn start\""
   },
   "repository": {
     "type": "git",
