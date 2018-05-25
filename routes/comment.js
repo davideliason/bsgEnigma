@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
+
+// only if you will use MongoDB and Mongoose
 var Comment = require('../models/Comment.js');
 
 /* GET ALL BOOKS */

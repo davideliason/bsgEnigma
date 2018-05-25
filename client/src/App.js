@@ -5,39 +5,51 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      passwords: [],
-      comments: []
+      comments: [],
+      quotes: [],
+      led_one: true
     }
   }
 
   componentDidMount() {
-     this.getComments();
+     // this.getComments();
+     this.getQuotes();
   }
 
+// if using mongdob 
 
-   getComments = () => {
+  //  getComments = () => {
+  //   // Get the passwords and store them in state
+  //   fetch('/api/comments')
+  //     .then(res => res.json())
+  //     .then(comments => this.setState({ comments }));
+  // }
+
+   getQuotes = () => {
     // Get the passwords and store them in state
-    fetch('/api/comments')
+    fetch('/api/quotes')
       .then(res => res.json())
-      .then(comments => this.setState({ comments }));
+      .then(quotes => this.setState({ quotes }));
   }
 
   render() {
-      const { comments } = this.state;
+      const { quotes } = this.state;
 
     return (
      <div className="App">
-
-        {comments.length ? (
+         <form action="">
+            <input id="m" autocomplete="off" /><button>Send</button>
+         </form>
+        {quotes.length ? (
           <div>
             <h1>BSG Enigma </h1>
-            <p>{this.state.comments[0].text}</p>
-            <p>{this.state.comments[0].author}</p>
+            <p>{this.state.quotes[0].text}</p>
+            <p>{this.state.quotes[0].author}</p>
 
           </div>
         ) : (
           <div>
-            <h1>No comments yet!(</h1>
+            <h1>No quotes yet!(</h1>
           </div>
         )}
       </div>

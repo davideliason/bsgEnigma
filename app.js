@@ -4,25 +4,32 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
 const generatePassword = require('password-generator');
+var fs = require('fs');
 
 var comment = require('./routes/comment');
+var quotes  = require('./routes/quotes');
 var app = express();
 
-// db
-var mongoose = require('mongoose');
-mongoose.Promise = require('bluebird');
-mongoose.connect('mongodb://localhost/bsgenigma', 
-	{ promiseLibrary: require('bluebird') })
-  .then(() =>  console.log('connection succesful'))
-  .catch((err) => console.error(err));
+// db: will remove for SOAK project
+
+// var mongoose = require('mongoose');
+// mongoose.Promise = require('bluebird');
+// mongoose.connect('mongodb://localhost/bsgenigma', 
+// 	{ promiseLibrary: require('bluebird') })
+//   .then(() =>  console.log('connection succesful'))
+//   .catch((err) => console.error(err));
 
 // MIDDLEWARE
-app.use(express.static(path.join(__dirname, 'client/build')));
+// app.use(express.static(path.join(__dirname, 'client/build')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({'extended':'false'}));
 
+// only if you will use MongoDB and Mongoose
 app.use('/api/comments', comment);
+app.use('/api/quotes', quotes);
+
+
 
 // app.get('/api/passwords', (req, res) => {
 //   const count = 5;
@@ -45,9 +52,9 @@ app.use('/api/comments', comment);
 
 // catchall route handler
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname+'/client/build/index.html'));
-});
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname+'/client/build/index.html'));
+// });
 
 const port = process.env.PORT || 5000;
 
