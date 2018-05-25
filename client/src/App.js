@@ -38,7 +38,7 @@ class App extends Component {
     return (
      <div className="App">
          <form action="">
-            <input id="m" autocomplete="off" /><button>Send</button>
+            <input id="m" autocomplete="off" /><button>Dream</button>
          </form>
         {quotes.length ? (
           <div>
