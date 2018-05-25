@@ -7,7 +7,6 @@ Code for interactive art sculpture
 
 ### Steps
 
-<<<<<<< HEAD
 First, this app was written to use mLab's SaaS mongoDB, but the sculpture will be in a remote location so...
 
 Second, on the GitHub 'master' branch, successfully created a semi-CRUD full-stack SPA. This was done by creating a back-end express connected to local mongoDB installation, the data was shared via an api route and proxy script.
@@ -21,7 +20,6 @@ To use:
 - Now, you can open a third terminal tab and spin up the app, from the top-level, with $ npm run dev.
 -Enjoy
 
----------------------
 
 Third, unfortunately, my assumption that installing mongodb onto rpi would be trivial was more optimistic than correct, so pivoting to a postgres installation [branch postgres on GitHub] 
 
