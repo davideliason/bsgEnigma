@@ -7,7 +7,7 @@ const generatePassword = require('password-generator');
 var fs = require('fs');
 
 var comment = require('./routes/comment');
-var quotes  = require('./routes/quotes');
+var quotes  = require('./routes/dreams');
 var app = express();
 
 // db: will remove for SOAK project
@@ -26,7 +26,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({'extended':'false'}));
 
 // only if you will use MongoDB and Mongoose
-app.use('/api/comments', comment);
 app.use('/api/quotes', quotes);
 
 
