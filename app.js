@@ -1,10 +1,31 @@
 var five = require("johnny-five");
-var board = new five.Board();
-
-board.on("ready", function() {
-
-  var led = new five.Led(10);
-
-  // "blink" the led in 500ms on-off phase periods
-  led.on()
+var Raspi = require("raspi-io");
+var board = new five.Board({
+  io: new Raspi()
 });
+board.on('ready', function() { 
+       // LED Pin variable 
+       const led = new five.Led('P1-7'); 
+       led.on(); 
+       this.repl.inject({ 
+               on: () => { 
+                       led.on(); 
+               }, 
+               off: () => { 
+                       led.stop().off(); 
+               }, 
+               strobe: () => { 
+                       led.stop().off(); 
+                       led.strobe(); 
+               }, 
+               blink: () => { 
+                       led.stop().off(); 
+                       led.blink(500); 
+               }, 
+       }); 
+       // When this script is stopped, turn the LED off 
+       // This is just for convenience 
+       this.on('exit', function() { 
+               led.stop().off(); 
+       }); 
+}); 
