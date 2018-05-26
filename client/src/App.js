@@ -5,40 +5,15 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      inputText: '',
-      dreams: [],
-      led_one: true,
-      comments: []
+      comments: [],
+      quotes: [],
+      led_one: true
     }
-
-    this.onInputChange = this.onInputChange.bind(this);
-    this.onInputKeyPress = this.onInputKeyPress.bind(this);
-    this.addDream = this.addDream.bind(this);
-    this.getDreams = this.getDreams.bind(this);
   }
-
-  onInputChange(e) {
-        this.setState({ inputText: e.target.value });
-    }
-
-  onInputKeyPress(e) {
-        if (e.key === "Enter") {
-            this.addItem();
-        }
-    }
-
-  addDream() {
-        const dreamToAdd = this.state.inputText;
-        const dreams = this.state.dreams;
-        this.setState({
-            inputText: "",
-            dreams: dreams.concat(dreamToAdd)
-        });
-    }
 
   componentDidMount() {
      // this.getComments();
-     this.getDreams();
+     this.getQuotes();
   }
 
 // if using mongdob 
@@ -50,35 +25,31 @@ class App extends Component {
   //     .then(comments => this.setState({ comments }));
   // }
 
-  getDreams = () => {
+   getQuotes = () => {
     // Get the passwords and store them in state
-    fetch('/api/dreams')
+    fetch('/api/quotes')
       .then(res => res.json())
-      .then(dreams => this.setState({ dreams }));
+      .then(quotes => this.setState({ quotes }));
   }
 
   render() {
-      const { dreams } = this.state;
-      const { inputText } = this.state;
+      const { quotes } = this.state;
 
     return (
      <div className="App">
-         <input type="text" className="inputclass" id="textfield1" placeholder='Enter a dream.' 
-                   value={inputText} onChange={this.onInputChange} onKeyPress={this.onInputKeyPress} />
-                <br />
-                <br />
-                <button className="button" onClick={this.addDream} >+</button>
-        {dreams.length ? (
+         <form action="">
+            <input id="m" autocomplete="off" /><button>Dream</button>
+         </form>
+        {quotes.length ? (
           <div>
             <h1>BSG Enigma </h1>
-            <p>{this.state.dreams[0].text}</p>
-            <p>{this.state.dreams[0].author}</p>
-            <p>{this.state.dreams[this.state.dreams.length-1].text}</p>
+            <p>{this.state.quotes[0].text}</p>
+            <p>{this.state.quotes[0].author}</p>
 
           </div>
         ) : (
           <div>
-            <h1>No dreams yet!(</h1>
+            <h1>No quotes yet!(</h1>
           </div>
         )}
       </div>
