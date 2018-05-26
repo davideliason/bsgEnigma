@@ -41,8 +41,7 @@ class App extends Component {
         {quotes.length ? (
           <div>
             <h1>BSG Enigma </h1>
-            <p>{this.state.quotes[0].text}</p>
-            <p>{this.state.quotes[0].author}</p>
+            <p>{this.state.quotes[this.state.quotes.length-1].text}</p>
 
           </div>
         ) : (
