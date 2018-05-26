@@ -4,30 +4,15 @@
   "description": "MERN for art sculpture",
   "main": "index.js",
   "dependencies": {
-    "bluebird": "^3.5.1",
-    "body-parser": "^1.18.3",
-    "concurrently": "^3.5.1",
-    "express": "^4.16.3",
-    "mongoose": "^5.1.2",
-    "morgan": "^1.9.0",
-    "nodemon": "^1.17.5",
-    "password-generator": "^2.2.0",
-    "path": "^0.12.7",
-    "serve-favicon": "^2.5.0",
+    "express": "^4.15.2",
     "socket.io": "^2.1.1"
   },
   "devDependencies": {},
-  "scripts": {
-    "start": "nodemon app.js",
-    "dev": "concurrently \"nodemon app.js\" \"cd client && yarn start\""
-  },
+  "scripts": {},
   "repository": {
-    "type": "git",
     "url": "git+https://github.com/davideliason/bsgenigma.git"
   },
-  "keywords": [
-    "mern"
-  ],
+  "keywords": [],
   "author": "David Eliason",
   "license": "MIT",
   "bugs": {
