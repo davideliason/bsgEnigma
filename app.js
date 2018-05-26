@@ -1,31 +1,38 @@
-var five = require("johnny-five");
-var Raspi = require("raspi-io");
-var board = new five.Board({
-  io: new Raspi()
-});
-board.on('ready', function() { 
-       // LED Pin variable 
-       const led = new five.Led('P1-7'); 
-       led.on(); 
-       this.repl.inject({ 
-               on: () => { 
-                       led.on(); 
-               }, 
-               off: () => { 
-                       led.stop().off(); 
-               }, 
-               strobe: () => { 
-                       led.stop().off(); 
-                       led.strobe(); 
-               }, 
-               blink: () => { 
-                       led.stop().off(); 
-                       led.blink(500); 
-               }, 
-       }); 
-       // When this script is stopped, turn the LED off 
-       // This is just for convenience 
-       this.on('exit', function() { 
-               led.stop().off(); 
-       }); 
-}); 
+var express = require('express');
+var app = express();
+var path = require('path');
+
+// This responds with "Hello World" on the homepage
+app.get('/', function (req, res) {
+   console.log("Got a GET request for the homepage");
+   res.sendFile(path.join(__dirname,'./index.html'));
+})
+
+// This responds a POST request for the homepage
+app.post('/', function (req, res) {
+   console.log("Got a POST request for the homepage");
+   res.send('Hello POST');
+})
+
+// This responds a DELETE request for the /del_user page.
+app.delete('/del_user', function (req, res) {
+   console.log("Got a DELETE request for /del_user");
+   res.send('Hello DELETE');
+})
+
+// This responds a GET request for the /list_user page.
+app.get('/goldNugget1', function (req, res) {
+   console.log("We are how we perceive ourselves");
+   res.send('We are all connected');
+})
+
+// This responds a GET request for abcd, abxcd, ab123cd, and so on
+
+
+var server = app.listen(3000, function () {
+
+   var host = server.address().address
+   var port = server.address().port
+
+   console.log("Example app listening at http://%s:%s", host, port)
+})
