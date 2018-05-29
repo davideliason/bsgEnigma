@@ -17,8 +17,21 @@ pre {
 	clear: left
 }
 
+header {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
+
 .section_titles {
 	background-color: #b3c6ff;
 	color: white;
 	padding: 20px;
+}
+
+.container {
+	width: 100%;
+	border: 1px solid white;
 }

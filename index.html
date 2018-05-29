@@ -6,12 +6,18 @@
 	<meta name="description" content="Exploring some of the deeper layers of the amazing TV series Battlestar Galactica">
 	<meta name="keywords" content="HTML, CSS, Javascript, Node.js, Express, React">
 	<meta name="author" content="David Eliason">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
-	<h3 title="title" style="color: yellow" id="title"> BSG Enigma </h3>
+ <div class="container">	
+	
 	<div>
+		<header>
+			<h3 title="title" style="color: yellow" id="title"> BSG Enigma </h3>
+		</header> 
+  
 		<picture id="pic_main_bsg">
 	  		<source media="(min-width: 650px)" srcset="bsg_dinner_table.jpeg">
 	  		<source media="(min-width: 465px)" srcset="bsg.jpeg">
@@ -44,6 +50,7 @@
 		   <p> The art piece is titled 'BSG Enigma' because there are a variety of interesting issues lying beneath the surface, including the nature of life and if a machine can have a soul, the consideration of a higher force or power, the concept of life being able to be reconstituted after a download, what or who was Starbuck (an angel?). </p>
 		  
 	</main>		
+ </div>	
 	<script>
 		function myFunction() {
   			var x = document.getElementsByClassName("section_titles");
