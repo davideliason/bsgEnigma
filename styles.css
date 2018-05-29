@@ -1,6 +1,10 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
 	background-color: blue;
-    margin: 0px;
+    margin: 0;
 }
 
 #pic_main_bsg {
@@ -18,33 +22,21 @@ pre {
 	clear: left
 }
 
-header {
+.header {
     color: white;
     background-color: black;
     text-align: center;
-    margin: 0px;
+    padding: 20px;
 }
 
-nav {
-    margin: 0px;
-    padding: 0px;
-}
-nav ul {
-    list-style-type: none;
-    padding: 0;
+.topnav {
     overflow: hidden;
     background-color: #333;
-    position: fixed;
-    width: 100%;
-    top: 0px;
 }
 
-nav li {
-	float: left;
-    padding-right: 10px;
-}
 
-nav li a {
+.topnav a {
+    float: left;
     display: block;
     color: white;
     text-align: center;
@@ -53,7 +45,8 @@ nav li a {
 }
 
 nav li a:hover {
-	background-color: green
+	background-color: green;
+    color: black;
 }
 
 footer ul {
@@ -72,11 +65,25 @@ footer li {
 	padding: 20px;
 }
 
-.container {
-	width: 100%;
-    margin: 0px;
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
 }
 
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
 [title="title"] {
 	background-color: white;
 }
