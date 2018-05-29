@@ -44,8 +44,8 @@ pre {
     text-decoration: none;
 }
 
-nav li a:hover {
-	background-color: green;
+.topnav a:hover {
+	background-color: blue;
     color: black;
 }
 
