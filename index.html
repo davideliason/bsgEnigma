@@ -7,7 +7,7 @@
 </head>
 
 <body>
-	<h3 title="title" style="color: blue"> BSG Enigma </h3>
+	<h3 title="title" style="color: yellow" id="title"> BSG Enigma </h3>
 	<div>
 		<picture id="pic_main_bsg">
 	  		<source media="(min-width: 650px)" srcset="bsg_dinner_table.jpeg">
@@ -33,7 +33,8 @@
 
 		 <h2 class="section_titles"> Considerations </h2>   
 		   <p> The art piece is titled 'BSG Enigma' because there are a variety of interesting issues lying beneath the surface, including the nature of life and if a machine can have a soul, the consideration of a higher force or power, the concept of life being able to be reconstituted after a download, what or who was Starbuck (an angel?). </p>
-		   <button onClick="myFunction()">click</button>
+		   <button onClick="myFunction()">goodbye color </button>
+		    <button onClick="displayResult()">feeling down?</button>
 	</main>		
 	<script>
 		function myFunction() {
@@ -42,6 +43,9 @@
     		x[i].style.display = "none";
   			 }
 			}
+        function displayResult() {
+    		document.getElementById("title").innerHTML = "Have a nice day!";
+            }		
 	</script>   
 </body>
 </html>
