@@ -1,5 +1,6 @@
 body {
-	background-color: blue
+	background-color: blue;
+    margin: 0px;
 }
 
 #pic_main_bsg {
@@ -18,30 +19,29 @@ pre {
 }
 
 header {
-    padding: 2em;
     color: white;
     background-color: black;
-    clear: left;
     text-align: center;
+    margin: 0px;
 }
 
 nav {
-    margin: 0;
+    margin: 0px;
+    padding: 0px;
 }
-
 nav ul {
     list-style-type: none;
-    margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #333;
     position: fixed;
     width: 100%;
-    top: 0;
+    top: 0px;
 }
 
 nav li {
 	float: left;
+    padding-right: 10px;
 }
 
 nav li a {
@@ -61,8 +61,6 @@ footer ul {
     padding: 0;
 }
 
-
-
 footer li {
 	display: inline;
 }
@@ -76,9 +74,10 @@ footer li {
 
 .container {
 	width: 100%;
-	border: 1px solid white;
+    margin: 0px;
 }
 
 [title="title"] {
-	border: 0.1px solid yellow;
+	background-color: white;
 }
+
