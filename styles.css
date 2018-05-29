@@ -6,8 +6,14 @@ body {
 	float: left;
 }
 
+#my_blog {
+	width: 200px;
+	height: 140px;
+	float: right;
+}
 
-main {
+
+pre {
 	clear: left
 }
 
