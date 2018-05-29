@@ -25,6 +25,22 @@ header {
     text-align: center;
 }
 
+nav {
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+	display: inline;
+}
+
+
 .section_titles {
 	background-color: #b3c6ff;
 	color: white;
