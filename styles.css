@@ -18,7 +18,7 @@ pre {
 }
 
 header {
-    padding: 1em;
+    padding: 2em;
     color: white;
     background-color: black;
     clear: left;
@@ -34,7 +34,10 @@ nav ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: green;
+    background-color: #333;
+    position: fixed;
+    width: 100%;
+    top: 0;
 }
 
 nav li {
