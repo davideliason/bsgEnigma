@@ -10,3 +10,9 @@ body {
 main {
 	clear: left
 }
+
+.section_titles {
+	background-color: #b3c6ff;
+	color: white;
+	padding: 20px;
+}
