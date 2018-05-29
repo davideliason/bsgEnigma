@@ -33,6 +33,15 @@
 
 		 <h2 class="section_titles"> Considerations </h2>   
 		   <p> The art piece is titled 'BSG Enigma' because there are a variety of interesting issues lying beneath the surface, including the nature of life and if a machine can have a soul, the consideration of a higher force or power, the concept of life being able to be reconstituted after a download, what or who was Starbuck (an angel?). </p>
-	</main>		   
+		   <button onClick="myFunction()">click</button>
+	</main>		
+	<script>
+		function myFunction() {
+  			var x = document.getElementsByClassName("section_titles");
+  			for (var i = 0; i < x.length; i++) {
+    		x[i].style.display = "none";
+  			 }
+			}
+	</script>   
 </body>
 </html>
