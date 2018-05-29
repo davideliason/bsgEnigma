@@ -10,7 +10,7 @@ app.get('/', function (req, res) {
 
 // This responds a POST request for the homepage
 app.post('/', function (req, res) {
-   console.log("Got a POST request for the homepage");
+   console.log("Got a POST req");
    res.send('Hello POST');
 })
 
@@ -21,18 +21,14 @@ app.delete('/del_user', function (req, res) {
 })
 
 // This responds a GET request for the /list_user page.
-app.get('/goldNugget1', function (req, res) {
-   console.log("We are how we perceive ourselves");
-   res.send('We are all connected');
+app.get('/react', function (req, res) {
+   console.log("React client");
 })
 
 // This responds a GET request for abcd, abxcd, ab123cd, and so on
 
 
-var server = app.listen(3000, function () {
+app.listen(3000, function () {
 
-   var host = server.address().address
-   var port = server.address().port
-
-   console.log("Example app listening at http://%s:%s", host, port)
-})
+   console.log("Server listening at 3000");
+});
