@@ -78,3 +78,7 @@ footer li {
 	width: 100%;
 	border: 1px solid white;
 }
+
+[title="title"] {
+	border: 0.1px solid yellow;
+}
