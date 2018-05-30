@@ -48,15 +48,10 @@ Responsive Web Design
   background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
   padding: 10px 0;
-  font-size: 20px;
+  font-size: 10px;
 }
 
 .item1 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-
-.item2 {
   grid-column-start: 1;
   grid-column-end: 3;
 }
