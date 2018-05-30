@@ -16,46 +16,23 @@
 		<h3 title="title id="title"> Battlestar Galactica Enigma </h3>
 	</div>
 
-	<div class="topnav">
-		<a href="#">Home</a>
-		<a href="About">About</a>
-  	</div>
-  
-		<picture id="pic_main_bsg">
-	  		<source media="(min-width: 650px)" srcset="bsg_dinner_table.jpeg">
-	  		<source media="(min-width: 465px)" srcset="bsg.jpeg">
-	  		<img src="bsg_dinner_table.jpeg" alt="BSG" style="width:auto;">
-		</picture>
+    <div class="row">
 
-		<pre> 
-			Battlestar Galactica
+      <!-- set nav elements to 25% of viewport -->
+	  <div class="col-3">
+	  	<div class="topnav">
+			<ul>
+			  <li><a href="#Humans">Humans</a></li>
+			  <li><a href="#Cylons">Cylons</a></li>
+			  <li><a href="#Enigma">Enigma</a></li>
+			</ul>
+		</div>
 
-			Much, much more than what meets the eye..
-		</pre>
-	</div>
-	   <!-- row is used by css for clearing .col-* float -->
-	<div class="row">
-	   <!-- 33 from css -->
-		<div class="col-4"> 
-			<h2> Humans </h2>
-			 <p> After being attacked by the Cylons, there is only a fraction of survivors (about 10,000). The main people we care about is the President of the Colonies (Rosalynn), flight crew (Apollo, who is Commander Adama's son), Starbuck, and my favorite character, Saul Tigh (second in commnand, the KO). Actually, Adama, Ty, Lee Adama, Gaius Baltar are all my favorites.</p>
-	    </div>
-	   
+		<form action="#">
 
-		 <div class="col-4"> 
-		   <h2>Cylons </h2> 
-		   <p>Created by humans, they rebelled and embarked on a journey towards self-realization which led them alternatively towards wiping out the rest of the humans and seeking reconciliation. </p>
-	     </div>
-
-	 
-		 <div class="col-4"> 
-		   <h2>Considerations </h2>   
-		   <p> The art piece is titled 'BSG Enigma' because there are a variety of interesting issues lying beneath the surface, including the nature of life and if a machine can have a soul, the consideration of a higher force or power, the concept of life being able to be reconstituted after a download, what or who was Starbuck (an angel?). </p>
-	     </div>
-	</div>
-
-          <form action="#">
 			  <fieldset>
+			  	Subscribe to newsletter:
+			    <br>
 			    <br>
 			    <input type="text" name="firstname" placeholder="first name"><br>
 			    <br>
@@ -64,6 +41,32 @@
 			    <input type="submit" value="Submit">
 			  </fieldset>
 		  </form>
+  	  </div>
+
+      <!-- set img element to 25% of viewport -->
+  	  
+	 
+	    <!-- the followig 3 columns are 16.6% -->
+		<div class="col-3"> 
+			<h2> Humans </h2>
+			 <p> After being attacked by the Cylons, there is only a fraction of survivors (about 10,000). The main people we care about is the President of the Colonies (Rosalynn), flight crew (Apollo, who is Commander Adama's son), Starbuck, and my favorite character, Saul Tigh (second in commnand, the KO). Actually, Adama, Ty, Lee Adama, Gaius Baltar are all my favorites.</p>
+	    </div>
+	   
+
+		<div class="col-3"> 
+		   <h2>Cylons </h2> 
+		   <p>Created by humans, they rebelled and embarked on a journey towards self-realization which led them alternatively towards wiping out the rest of the humans and seeking reconciliation. </p>
+	     </div>
+
+	 
+		<div class="col-3"> 
+		   <h2>Considerations </h2>   
+		   <p> The art piece is titled 'BSG Enigma' because there are a variety of interesting issues lying beneath the surface, including the nature of life and if a machine can have a soul, the consideration of a higher force or power, the concept of life being able to be reconstituted after a download, what or who was Starbuck (an angel?). </p>
+	     </div>
+	<!-- end of row -->
+	</div>
+
+          
 	</main>		
 	<div class="footer">
 		<ul>
