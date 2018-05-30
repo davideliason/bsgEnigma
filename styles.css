@@ -7,12 +7,11 @@
  
  /* Previously, had created a .column class of 33% */
  /* this worked so long as you only needed 3 columns: */
- /* .column {
+ .column {
     float: left;
     width: 33.33%;
     padding: 15px;
 }
-*/
 
 .row:after {
     content: "";
@@ -20,6 +19,7 @@
     clear: both;
 }
 
+Responsive Web Design 
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
 .col-3 {width: 25%;}
@@ -32,6 +32,34 @@
 .col-10 {width: 83.33%;}
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
+
+
+/* CSS Grid */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-gap: 1px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 10px 0;
+  font-size: 20px;
+}
+
+.item1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.item2 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
 
 [class*="col-"] {
     float: left;
@@ -83,27 +111,6 @@ pre {
     color: black;
 }
 
-
-
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto;
-  grid-gap: 1px;
-  background-color: #2196F3;
-  padding: 10px;
-}
-.grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  padding: 10px 0;
-  font-size: 20px;
-}
-
-.item1 {
-  grid-column-start: 1;
-  grid-column-end: 4;
-}
-
 .section_titles {
 	background-color: #b3c6ff;
 	color: white;
@@ -113,7 +120,6 @@ pre {
 #author {
     font-size: 8px;
 }
-
 
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
