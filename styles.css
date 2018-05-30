@@ -70,6 +70,10 @@ body {
     margin: 0;
 }
 
+img {
+    opacity: 0.3;
+    border-radius: 25px;
+}
 
 pre {
 	clear: left
