@@ -57,6 +57,31 @@ Responsive Web Design
    background: linear-gradient(black, blue);
 }
 
+/* FlexBox */
+
+.flex-container {
+  display: flex;
+  background-color: rgb(0, 153, 255);
+  flex-direction: row;
+  align-content: space-between;
+}
+
+.flex-container > div {
+
+  background-color: rgb(0, 122, 204);
+  color: white;
+  margin: 10px;
+  padding: 20px;
+  font-size: 10px;
+}
+
+.flex-container img {
+     opacity: 0.4;
+     border-radius: 25px;
+     width: 150px;
+}
+
+
 [class*="col-"] {
     float: left;
     padding: 15px;
