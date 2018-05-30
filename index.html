@@ -6,7 +6,9 @@
 	<meta name="description" content="Exploring some of the deeper layers of the amazing TV series Battlestar Galactica">
 	<meta name="keywords" content="HTML, CSS, Javascript, Node.js, Express, React">
 	<meta name="author" content="David Eliason">
+	<!-- RWD -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<link rel="stylesheet" href="./styles.css">
 </head>
 <body>
@@ -31,22 +33,25 @@
 			Much, much more than what meets the eye..
 		</pre>
 	</div>
-	
+	   <!-- row is used by css for clearing .col-* float -->
 	<div class="row">
-	  <div class="column">
-		<h2 class="section_titles"> Humans </h2> 
-		 <p> After being attacked by the Cylons, there is only a fraction of survivors (about 10,000). The main people we care about is the President of the Colonies (Rosalynn), flight crew (Apollo, who is Commander Adama's son), Starbuck, and my favorite character, Saul Tigh (second in commnand, the KO). Actually, Adama, Ty, Lee Adama, Gaius Baltar are all my favorites.</p>
-	   </div>
+	   <!-- 33 from css -->
+		<div class="col-4"> 
+			<h2> Humans </h2>
+			 <p> After being attacked by the Cylons, there is only a fraction of survivors (about 10,000). The main people we care about is the President of the Colonies (Rosalynn), flight crew (Apollo, who is Commander Adama's son), Starbuck, and my favorite character, Saul Tigh (second in commnand, the KO). Actually, Adama, Ty, Lee Adama, Gaius Baltar are all my favorites.</p>
+	    </div>
+	   
 
-	  <div class="column">
-		 <h2 class="section_titles"> Cylons </h2> 
+		 <div class="col-4"> 
+		   <h2>Cylons </h2> 
 		   <p>Created by humans, they rebelled and embarked on a journey towards self-realization which led them alternatively towards wiping out the rest of the humans and seeking reconciliation. </p>
-	  </div>
+	     </div>
 
-	  <div class="column">
-		 <h2 class="section_titles"> Considerations </h2>   
+	 
+		 <div class="col-4"> 
+		   <h2>Considerations </h2>   
 		   <p> The art piece is titled 'BSG Enigma' because there are a variety of interesting issues lying beneath the surface, including the nature of life and if a machine can have a soul, the consideration of a higher force or power, the concept of life being able to be reconstituted after a download, what or who was Starbuck (an angel?). </p>
-	  </div>
+	     </div>
 	</div>
 
           <form action="#">
