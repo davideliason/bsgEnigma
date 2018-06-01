@@ -3,6 +3,8 @@ var http = require('http');
 var url = require("url");
 var querystring = require('querystring');
 var EventEmitter = require('events').EventEmitter;
+var mymodule = require('../mymodule');
+
 
 var server = http.createServer();
 
@@ -33,7 +35,10 @@ server.on('close', () => {
 	console.log("goodbye");
 });
 
+// use my own module
 
+mymodule.sayHello();
+mymodule.sayGoodbye();
 
 var testMessage = new EventEmitter();
 
