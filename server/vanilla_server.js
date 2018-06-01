@@ -8,7 +8,12 @@ var server = http.createServer(function(req, res) {
 	console.log(all_req);
 
 	res.writeHead(200, {"Content-Type": "text/html"});
-	res.write('hello world');
+	if(page == '/'){
+		res.write("home");
+	}
+	else if(page == '/hello'){
+		res.write("hello to you too");
+	}
 	res.end();
     });
 
