@@ -1,8 +1,11 @@
+// modules
 var http = require('http');
 var url = require("url");
 var querystring = require('querystring');
 
-var server = http.createServer(function(req, res) {
+var server = http.createServer();
+
+server.on("request", function(req, res) {
 	var params = querystring.parse(url.parse(req.url).query);
 	var page = url.parse(req.url).pathname;
 	var all_req = url.parse(req.url);
@@ -25,6 +28,12 @@ var server = http.createServer(function(req, res) {
 	res.end();
     });
 
+server.on('close', () => {
+	console.log("goodbye");
+});
+
 
 server.listen(8080);
+
+server.close();
 
