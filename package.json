@@ -4,7 +4,8 @@
   "description": "### Why? Code for interactive art sculpture",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,9 @@
   "dependencies": {
     "express": "^4.16.3",
     "johnny-five": "^0.15.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.10.2",
+    "webpack-cli": "^2.1.4"
   }
 }

@@ -4,8 +4,8 @@ var path = require('path');
 
 // This responds with "Hello World" on the homepage
 app.get('/', function (req, res) {
-   console.log("Got a GET request for the homepage");
-   res.sendFile(path.join(__dirname,'./index.html'));
+   console.log("got a GET request");
+   res.sendFile(path.join(__dirname,'./public/index.html'));
 })
 
 // This responds a POST request for the homepage
@@ -29,6 +29,5 @@ app.get('/react', function (req, res) {
 
 
 app.listen(3000, function () {
-
    console.log("Server listening at 3000");
 });
