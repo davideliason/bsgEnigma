@@ -2,6 +2,7 @@
 var http = require('http');
 var url = require("url");
 var querystring = require('querystring');
+var EventEmitter = require('events').EventEmitter;
 
 var server = http.createServer();
 
@@ -31,6 +32,16 @@ server.on("request", function(req, res) {
 server.on('close', () => {
 	console.log("goodbye");
 });
+
+
+
+var testMessage = new EventEmitter();
+
+testMessage.on('testMessage', function(message){
+    console.log(message);
+});
+
+testMessage.emit('testMessage', 'hello there world!');
 
 
 server.listen(8080);
