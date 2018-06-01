@@ -4,7 +4,9 @@ var url = require("url");
 var querystring = require('querystring');
 var EventEmitter = require('events').EventEmitter;
 var mymodule = require('../mymodule');
+var markdown = require('markdown').markdown;
 
+console.log(markdown.toHTML('A paragraph in **markdown**!'));
 
 var server = http.createServer();
 
