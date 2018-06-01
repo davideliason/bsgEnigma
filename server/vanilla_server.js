@@ -14,6 +14,9 @@ var server = http.createServer(function(req, res) {
 	else if(page == '/hello'){
 		res.write("hello to you too");
 	}
+	else{
+		res.writeHead(404);
+	}
 	res.end();
     });
 
