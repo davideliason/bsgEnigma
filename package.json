@@ -4,9 +4,8 @@
   "description": "### Why? Code for interactive art sculpture",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "build": "webpack"
-  },
+    "start": "node app.js"
+      },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/davideliason/bsgenigma.git"
@@ -20,7 +19,7 @@
   "dependencies": {
     "express": "^4.16.3",
     "johnny-five": "^0.15.0",
-    "markdown": "^0.5.0"
+    "markdown": "~0.5.0"
   },
   "devDependencies": {
     "webpack": "^4.10.2",

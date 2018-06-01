@@ -1,33 +1,36 @@
 var express = require('express');
-var app = express();
-var path = require('path');
+var app 	= express();
+var path 	= require('path');
 
 // This responds with "Hello World" on the homepage
 app.get('/', function (req, res) {
    console.log("got a GET request");
    res.sendFile(path.join(__dirname,'./public/index.html'));
-})
+});
 
-// This responds a POST request for the homepage
-app.post('/', function (req, res) {
-   console.log("Got a POST req");
-   res.send('Hello POST');
-})
+app.get('/coffee', function(req,res){
+	res.setHeader(200,{'Content-Type': 'text/plain'});
+	res.end("need some caffeine");
+});
 
-// This responds a DELETE request for the /del_user page.
-app.delete('/del_user', function (req, res) {
-   console.log("Got a DELETE request for /del_user");
-   res.send('Hello DELETE');
-})
+app.get('/water', (req,res) => {
+	res.setHeader({"Content-Type": "text/plain"});
+	res.end('only if there is no coffee');
+});
 
-// This responds a GET request for the /list_user page.
-app.get('/react', function (req, res) {
-   console.log("React client");
-})
+app.get('/drink/:beverage', (req,res) => {
+	res.setHeader('Content-Type', 'text/plain');
+	res.end('You\'re drinking ' + req.params.beverage);
+});
 
-// This responds a GET request for abcd, abxcd, ab123cd, and so on
+app.use(function(req, res, next){
+    res.setHeader('Content-Type', 'text/plain');
+    // res.send(404, 'Page cannot be found!'); // deprec.
+    res.status(404).send('Page can\'t be found');
+});
 
 
-app.listen(3000, function () {
-   console.log("Server listening at 3000");
+
+app.listen(8080, function () {
+   console.log("Server listening at 8080");
 });
