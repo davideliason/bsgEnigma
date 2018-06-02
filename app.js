@@ -19,8 +19,7 @@ app.get('/water', (req,res) => {
 });
 
 app.get('/drink/:beverage', (req,res) => {
-	res.setHeader('Content-Type', 'text/plain');
-	res.end('You\'re drinking ' + req.params.beverage);
+	res.render('beverages.ejs', {beverage: req.params.beverage})
 });
 
 app.use(function(req, res, next){
