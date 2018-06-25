@@ -18,8 +18,12 @@ app.get('/water', (req,res) => {
 	res.end('only if there is no coffee');
 });
 
-app.get('/drink/:beverage', (req,res) => {
-	res.render('beverages.ejs', {beverage: req.params.beverage})
+app.get('/drink/:number', (req,res) => {
+	var drinks = ['coke','water','coffee'];
+	res.render('beverages.ejs', {
+		number: req.params.number,
+		drinks: drinks
+	});
 });
 
 app.use(function(req, res, next){
